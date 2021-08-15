@@ -16,8 +16,8 @@ _mailinglist
 .idea/
 docs/_build/
 __pycache__
-.env_file
-
+env_file
+trust.json
 # Coverage reports
 htmlcov/
 .coverage
