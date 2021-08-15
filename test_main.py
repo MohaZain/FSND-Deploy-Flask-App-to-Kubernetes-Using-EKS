@@ -6,11 +6,12 @@ import json
 import pytest
 
 import main
-
-SECRET = 'TestSecret'
-TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NjEzMDY3OTAsIm5iZiI6MTU2MDA5NzE5MCwiZW1haWwiOiJ3b2xmQHRoZWRvb3IuY29tIn0.IpM4VMnqIgOoQeJxUbLT-cRcAjK41jronkVrqRLFmmk'
-EMAIL = 'wolf@thedoor.com'
-PASSWORD = 'huff-puff'
+# export TOKEN=`curl -d '{"email":"gw.zain@gmail.com","password":"123456"}' -H "Content-Type: application/json" -X POST a6a9b0dd1a0534625a10ee92663a93b6-708325965.us-east-2.elb.amazonaws.com/auth  | jq -r '.token'`
+# curl --request GET 'a6a9b0dd1a0534625a10ee92663a93b6-708325965.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
+SECRET = 'YourJWTSecret'
+TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzAyMzEwNjgsIm5iZiI6MTYyOTAyMTQ2OCwiZW1haWwiOiJndy56YWluQGdtYWlsLmNvbSJ9.nuZL0jRotoKKwHxZyKDRg47Qy4Oao10FlH_XH0Dgh00'
+EMAIL = 'gw.zain@gmail.com  '
+PASSWORD = '123456'
 
 @pytest.fixture
 def client():
